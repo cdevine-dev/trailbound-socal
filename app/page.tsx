@@ -140,6 +140,7 @@ export default function Home() {
         <nav>
           <a className="brand" href="#"><span>▲</span> TRAILBOUND <em>SO·CAL</em></a>
           <a href="#explore">Explore</a>
+          <a href="#community">Community</a>
           <a href="#about">Field notes</a>
         </nav>
         <div className="hero-content">
@@ -189,6 +190,24 @@ export default function Home() {
               {!filtered.length && <div className="empty"><b>No trail found.</b><p>Try widening the filters or searching another region.</p><button onClick={clearFilters}>RESET FILTERS</button></div>}
             </div>
           </div>
+        </div>
+      </section>
+
+      <section id="community" className="discord-join">
+        <div className="discord-art">
+          <div className="discord-orbit" aria-hidden="true" />
+          <img src="/discord-icon.png" alt="Trailbound SoCal mountain and trail icon" />
+        </div>
+        <div className="discord-copy">
+          <p className="eyebrow">THE COMMUNITY TRAILHEAD</p>
+          <h2>Plan together.<br /><i>Go farther.</i></h2>
+          <p>Swap trail conditions, share trip reports, suggest new places, and meet other hikers and campers exploring Southern California.</p>
+          <div className="discord-topics" aria-label="Discord community topics">
+            <span>TRAIL CONDITIONS</span><span>TRIP REPORTS</span><span>LOCAL TIPS</span>
+          </div>
+          <a className="discord-button" href="https://discord.gg/C4AD2wFR2" target="_blank" rel="noreferrer">
+            JOIN THE DISCORD <span>↗</span>
+          </a>
         </div>
       </section>
 
