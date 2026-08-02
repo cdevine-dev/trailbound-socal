@@ -49,14 +49,15 @@ npm run build
 
 ## Deploy to GitHub Pages
 
-This project uses a Sites-compatible React structure. The simplest GitHub Pages route is to connect the repository to a static deployment service such as Cloudflare Pages or use the included Sites deployment. If you want GitHub Pages specifically, add a static export adapter or migrate the `app/page.tsx` UI into a Vite React project, because the current build includes a Cloudflare Worker entry.
+The repository includes a standalone static version in `index.html`, `static.css`, and `static.js`. It does not require a build server.
 
-For a straightforward GitHub workflow:
+1. Push the repository to GitHub.
+2. Open **Settings → Pages** in the GitHub repository.
+3. Under **Build and deployment**, select **Deploy from a branch**.
+4. Choose the `main` branch and the `/(root)` folder, then save.
+5. GitHub will publish the project at `https://YOUR-USERNAME.github.io/trailbound-socal/`.
 
-1. Create an empty GitHub repository.
-2. Commit this folder and push it to the repository.
-3. Connect the repository to Cloudflare Pages, or deploy using Sites.
-4. Use `npm run build` as the build command and `dist/client` as the static assets directory when your host asks.
+The `app/` source remains available for the separately hosted Sites version.
 
 ## Map and data notes
 

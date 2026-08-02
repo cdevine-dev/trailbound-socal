@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A curated, interactive field guide to Southern California hikes and camping spots." />
+    <meta property="og:title" content="Trailbound SoCal — Hikes & Camps" />
+    <meta property="og:description" content="Find memorable trails and campsites from the coast to the high desert." />
+    <meta property="og:type" content="website" />
+    <title>Trailbound SoCal — Hikes & Camps</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Franklin:ital,wght@1,800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+    <link rel="stylesheet" href="./static.css" />
+  </head>
+  <body>
+    <main>
+      <header class="hero">
+        <nav>
+          <a class="brand" href="#"><span>▲</span> TRAILBOUND <em>SO·CAL</em></a>
+          <a href="#explore">Explore</a>
+          <a href="#about">Field notes</a>
+        </nav>
+        <div class="hero-content">
+          <p class="eyebrow">CURATED OUTDOORS · SOUTHERN CALIFORNIA</p>
+          <h1>Find your way<br /><i>out there.</i></h1>
+          <p class="intro">Handpicked trails and campsites from the coast to the high desert. Filter the collection, explore the map, and plan a weekend worth remembering.</p>
+          <a class="primary-button" href="#explore">EXPLORE 12 PLACES <span>↓</span></a>
+        </div>
+        <div class="hero-stats" aria-label="Collection highlights">
+          <span><b>08</b> TRAILS</span><span><b>04</b> CAMPS</span><span><b>06</b> REGIONS</span>
+        </div>
+      </header>
+
+      <section id="explore" class="explore">
+        <div class="section-heading">
+          <div><p class="eyebrow dark">THE FIELD GUIDE</p><h2>Choose your next<br /><i>escape.</i></h2></div>
+          <p>Every place is selected for scenery, character, and that distinctly Southern California feeling.</p>
+        </div>
+
+        <div class="filters" aria-label="Filter locations">
+          <label class="search"><span>⌕</span><input id="search" placeholder="Search places, regions, amenities…" aria-label="Search locations" /></label>
+          <label><span>TYPE</span><select id="type"><option>All</option><option>Hike</option><option>Camp</option></select></label>
+          <label><span>DIFFICULTY</span><select id="difficulty"><option>All</option><option>Easy</option><option>Moderate</option><option>Hard</option></select></label>
+          <label><span>REGION</span><select id="region"><option>All</option></select></label>
+        </div>
+
+        <div class="workspace">
+          <div id="explore-map" class="map-panel">
+            <div id="map" class="map" aria-label="Interactive map of Southern California hikes and campsites"></div>
+            <div class="legend"><span><i class="dot hike"></i>HIKES</span><span><i class="dot camp"></i>CAMPS</span></div>
+          </div>
+          <div class="results">
+            <div class="results-head">
+              <p><b id="result-count">12</b> PLACES FOUND</p>
+              <button id="clear" hidden>CLEAR ALL</button>
+            </div>
+            <div id="cards" class="cards"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="field-notes">
+        <p class="eyebrow">BEFORE YOU GO</p>
+        <h2>Adventure is better<br /><i>with a little homework.</i></h2>
+        <div class="notes">
+          <article><b>01</b><h3>Check current conditions</h3><p>Weather, fire restrictions, road access, and seasonal closures can change quickly. Confirm details with the managing agency.</p></article>
+          <article><b>02</b><h3>Carry more water</h3><p>Southern California is dry and exposed. Pack generously, start early, and turn around before heat or fatigue makes the choice for you.</p></article>
+          <article><b>03</b><h3>Leave it better</h3><p>Stay on durable surfaces, pack out everything, respect wildlife, and follow local fire rules. These places depend on all of us.</p></article>
+        </div>
+      </section>
+
+      <footer>
+        <a class="brand" href="#"><span>▲</span> TRAILBOUND <em>SO·CAL</em></a>
+        <p>Curated with respect for the wild places of Southern California.</p>
+        <a href="#explore">BACK TO MAP ↑</a>
+      </footer>
+    </main>
+    <noscript>This interactive guide requires JavaScript for its map and filters.</noscript>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+    <script src="./static.js"></script>
+  </body>
+</html>
