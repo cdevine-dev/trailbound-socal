@@ -2,7 +2,9 @@
 
 A responsive, map-first field guide to memorable hikes and camping spots across Southern California.
 
-[View the live GitHub Pages site](https://cdevine-dev.github.io/trailbound-socal/) · [View the Sites mirror](https://trailbound-socal.seekr27.chatgpt.site/)
+[Visit the official Trailbound SoCal website](https://cdevine-dev.github.io/trailbound-socal/)
+
+The project is also maintained on a Sites mirror, but the GitHub Pages address above is the official public URL.
 
 ## About
 
