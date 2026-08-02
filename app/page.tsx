@@ -205,7 +205,7 @@ export default function Home() {
           <div className="discord-topics" aria-label="Discord community topics">
             <span>TRAIL CONDITIONS</span><span>TRIP REPORTS</span><span>LOCAL TIPS</span>
           </div>
-          <a className="discord-button" href="https://discord.gg/C4AD2wFR2" target="_blank" rel="noreferrer">
+          <a className="discord-button" href="https://discord.gg/8r35tR2Awb" target="_blank" rel="noreferrer">
             JOIN THE DISCORD <span>↗</span>
           </a>
         </div>
