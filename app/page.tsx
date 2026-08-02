@@ -64,6 +64,7 @@ export default function Home() {
   const [region, setRegion] = useState("All");
   const [selected, setSelected] = useState<Place | null>(null);
   const [mapReady, setMapReady] = useState(false);
+  const [showWorkNotice, setShowWorkNotice] = useState(true);
   const mapElement = useRef<HTMLDivElement>(null);
   const mapRef = useRef<LeafletMap | null>(null);
   const markersRef = useRef<Map<number, LeafletMarker>>(new Map());
@@ -136,6 +137,16 @@ export default function Home() {
 
   return (
     <main>
+      {showWorkNotice && (
+        <aside className="work-notice" aria-label="Work in progress notice">
+          <div className="work-notice-copy">
+            <span>EARLY ACCESS</span>
+            <p><strong>Trailbound SoCal is a work in progress.</strong> Trail details, permits, and conditions may change. Verify your plans with the managing agency before you go.</p>
+          </div>
+          <a href="mailto:cash.devine1@gmail.com?subject=Trailbound%20SoCal%20feedback">SHARE FEEDBACK</a>
+          <button type="button" onClick={() => setShowWorkNotice(false)} aria-label="Dismiss work in progress notice">×</button>
+        </aside>
+      )}
       <header className="hero">
         <nav>
           <a className="brand" href="#"><span>▲</span> TRAILBOUND <em>SO·CAL</em></a>

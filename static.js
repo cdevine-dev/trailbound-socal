@@ -107,4 +107,7 @@ function clearFilters() {
 
 [elements.search,elements.type,elements.difficulty,elements.region].forEach(element => element.addEventListener(element.tagName === "INPUT" ? "input" : "change", render));
 elements.clear.addEventListener("click", clearFilters);
+document.querySelector("#dismiss-work-notice")?.addEventListener("click", () => {
+  document.querySelector("#work-notice")?.remove();
+});
 render();
